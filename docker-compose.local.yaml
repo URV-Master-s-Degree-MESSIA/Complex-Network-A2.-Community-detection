@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  network_analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+      - ./data:/app/data
+      - ./results:/app/results
+    # Container will stay running in the background
+    # To run Python scripts, pleas read Readmy file.
